@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="1"></h1>
+<script>
+    s='{"name":"adarsh","age":"function() {return 20}","place":"india"}'
+    obj=JSON.parse(s)
+    obj.age=eval("("+obj.age+")")
+    document.getElementById("1").innerHTML=obj.name+","+obj.age()+","+obj.place
+</script>
+</body>
+</html>
